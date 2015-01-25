@@ -164,7 +164,7 @@ angular.module('textAngularSetup', [])
 })
 .run(['taRegisterTool', '$window', 'taTranslations', 'taSelection', function(taRegisterTool, $window, taTranslations, taSelection){
 	taRegisterTool("html", {
-		iconclass: 'fa fa-code',
+		iconclass: 'md-icon md-icon-code',
 		tooltiptext: taTranslations.html.tooltip,
 		action: function(){
 			this.$editor().switchView();
@@ -207,7 +207,7 @@ angular.module('textAngularSetup', [])
 		activeState: function(){ return this.$editor().queryFormatBlockState('pre'); }
 	});
 	taRegisterTool('ul', {
-		iconclass: 'fa fa-list-ul',
+		iconclass: 'md-icon md-icon-format-list-numbered',
 		tooltiptext: taTranslations.ul.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("insertUnorderedList", null);
@@ -215,7 +215,7 @@ angular.module('textAngularSetup', [])
 		activeState: function(){ return this.$editor().queryCommandState('insertUnorderedList'); }
 	});
 	taRegisterTool('ol', {
-		iconclass: 'fa fa-list-ol',
+		iconclass: 'md-icon md-icon-list-bulleted',
 		tooltiptext: taTranslations.ol.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("insertOrderedList", null);
@@ -223,7 +223,7 @@ angular.module('textAngularSetup', [])
 		activeState: function(){ return this.$editor().queryCommandState('insertOrderedList'); }
 	});
 	taRegisterTool('quote', {
-		iconclass: 'fa fa-quote-right',
+		iconclass: 'md-icon md-icon-format-quote',
 		tooltiptext: taTranslations.quote.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("formatBlock", "<BLOCKQUOTE>");
@@ -231,21 +231,21 @@ angular.module('textAngularSetup', [])
 		activeState: function(){ return this.$editor().queryFormatBlockState('blockquote'); }
 	});
 	taRegisterTool('undo', {
-		iconclass: 'fa fa-undo',
+		iconclass: 'md-icon md-icon-undo',
 		tooltiptext: taTranslations.undo.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("undo", null);
 		}
 	});
 	taRegisterTool('redo', {
-		iconclass: 'fa fa-repeat',
+		iconclass: 'md-icon md-icon-redo',
 		tooltiptext: taTranslations.redo.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("redo", null);
 		}
 	});
 	taRegisterTool('bold', {
-		iconclass: 'fa fa-bold',
+		iconclass: 'md-icon md-icon-format-bold',
 		tooltiptext: taTranslations.bold.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("bold", null);
@@ -256,7 +256,7 @@ angular.module('textAngularSetup', [])
 		commandKeyCode: 98
 	});
 	taRegisterTool('justifyLeft', {
-		iconclass: 'fa fa-align-left',
+		iconclass: 'md-icon md-icon-format-align-left',
 		tooltiptext: taTranslations.justifyLeft.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("justifyLeft", null);
@@ -278,7 +278,7 @@ angular.module('textAngularSetup', [])
 		}
 	});
 	taRegisterTool('justifyRight', {
-		iconclass: 'fa fa-align-right',
+		iconclass: 'md-icon md-icon-format-align-right',
 		tooltiptext: taTranslations.justifyRight.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("justifyRight", null);
@@ -291,7 +291,7 @@ angular.module('textAngularSetup', [])
 		}
 	});
 	taRegisterTool('justifyCenter', {
-		iconclass: 'fa fa-align-center',
+		iconclass: 'md-icon md-icon-format-align-center',
 		tooltiptext: taTranslations.justifyCenter.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("justifyCenter", null);
@@ -304,7 +304,7 @@ angular.module('textAngularSetup', [])
 		}
 	});
 	taRegisterTool('indent', {
-		iconclass: 'fa fa-indent',
+		iconclass: 'md-icon md-icon-format-indent-increase',
 		tooltiptext: taTranslations.indent.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("indent", null);
@@ -314,7 +314,7 @@ angular.module('textAngularSetup', [])
 		}
 	});
 	taRegisterTool('outdent', {
-		iconclass: 'fa fa-outdent',
+		iconclass: 'md-icon md-icon-format-indent-decrease',
 		tooltiptext: taTranslations.outdent.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("outdent", null);
@@ -324,7 +324,7 @@ angular.module('textAngularSetup', [])
 		}
 	});
 	taRegisterTool('italics', {
-		iconclass: 'fa fa-italic',
+		iconclass: 'md-icon md-icon-format-italic',
 		tooltiptext: taTranslations.italic.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("italic", null);
@@ -335,7 +335,7 @@ angular.module('textAngularSetup', [])
 		commandKeyCode: 105
 	});
 	taRegisterTool('underline', {
-		iconclass: 'fa fa-underline',
+		iconclass: 'md-icon md-icon-format-underline',
 		tooltiptext: taTranslations.underline.tooltip,
 		action: function(){
 			return this.$editor().wrapSelection("underline", null);
@@ -346,7 +346,7 @@ angular.module('textAngularSetup', [])
 		commandKeyCode: 117
 	});
 	taRegisterTool('strikeThrough', {
-		iconclass: 'fa fa-strikethrough',
+		iconclass: 'md-icon md-icon-format-strikethrough',
 		action: function(){
 			return this.$editor().wrapSelection("strikeThrough", null);
 		},
@@ -355,7 +355,7 @@ angular.module('textAngularSetup', [])
 		}
 	});
 	taRegisterTool('clear', {
-		iconclass: 'fa fa-ban',
+		iconclass: 'md-icon md-icon-do-not-disturb',
 		tooltiptext: taTranslations.clear.tooltip,
 		action: function(deferred, restoreSelection){
 			var i;
@@ -432,8 +432,8 @@ angular.module('textAngularSetup', [])
 		editorScope.displayElements.popover.css('width', '375px');
 		var container = editorScope.displayElements.popoverContainer;
 		container.empty();
-		var buttonGroup = angular.element('<div class="btn-group" style="padding-right: 6px;">');
-		var fullButton = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1">100% </button>');
+		var buttonGroup = angular.element('<section layout="column" style="padding-right: 6px;">');
+		var fullButton = angular.element('<md-button unselectable="on" tabindex="-1">100% </md-button>');
 		fullButton.on('click', function(event){
 			event.preventDefault();
 			$element.css({
@@ -442,7 +442,7 @@ angular.module('textAngularSetup', [])
 			});
 			finishEdit();
 		});
-		var halfButton = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1">50% </button>');
+		var halfButton = angular.element('<md-button unselectable="on" tabindex="-1">50% </md-button>');
 		halfButton.on('click', function(event){
 			event.preventDefault();
 			$element.css({
@@ -451,7 +451,7 @@ angular.module('textAngularSetup', [])
 			});
 			finishEdit();
 		});
-		var quartButton = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1">25% </button>');
+		var quartButton = angular.element('<md-button unselectable="on" tabindex="-1">25% </md-button>');
 		quartButton.on('click', function(event){
 			event.preventDefault();
 			$element.css({
@@ -460,7 +460,7 @@ angular.module('textAngularSetup', [])
 			});
 			finishEdit();
 		});
-		var resetButton = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1">Reset</button>');
+		var resetButton = angular.element('<md-button unselectable="on"  tabindex="-1">Reset </md-button>');
 		resetButton.on('click', function(event){
 			event.preventDefault();
 			$element.css({
@@ -475,8 +475,8 @@ angular.module('textAngularSetup', [])
 		buttonGroup.append(resetButton);
 		container.append(buttonGroup);
 		
-		buttonGroup = angular.element('<div class="btn-group" style="padding-right: 6px;">');
-		var floatLeft = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1"><i class="fa fa-align-left"></i></button>');
+		buttonGroup = angular.element('<section layout="column" style="padding-right: 6px;">');
+		var floatLeft = angular.element('<md-button unselectable="on" tabindex="-1"><i class="md-icon md-icon-format-align-left"></i></md-button>');
 		floatLeft.on('click', function(event){
 			event.preventDefault();
 			// webkit
@@ -487,7 +487,7 @@ angular.module('textAngularSetup', [])
 			$element.css('styleFloat', 'left');
 			finishEdit();
 		});
-		var floatRight = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1"><i class="fa fa-align-right"></i></button>');
+		var floatRight = angular.element('<md-button unselectable="on" tabindex="-1"><i class="md-icon md-icon-format-align-right"></i></md-button>');
 		floatRight.on('click', function(event){
 			event.preventDefault();
 			// webkit
@@ -498,7 +498,7 @@ angular.module('textAngularSetup', [])
 			$element.css('styleFloat', 'right');
 			finishEdit();
 		});
-		var floatNone = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1"><i class="fa fa-align-justify"></i></button>');
+		var floatNone = angular.element('<md-button unselectable="on" tabindex="-1"><i class="md-icon md-icon-format-align-justify"></i></md-button>');
 		floatNone.on('click', function(event){
 			event.preventDefault();
 			// webkit
@@ -514,8 +514,8 @@ angular.module('textAngularSetup', [])
 		buttonGroup.append(floatRight);
 		container.append(buttonGroup);
 		
-		buttonGroup = angular.element('<div class="btn-group">');
-		var remove = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" unselectable="on" tabindex="-1"><i class="fa fa-trash-o"></i></button>');
+		buttonGroup = angular.element('<section layout="column">');
+		var remove = angular.element('<md-button unselectable="on" tabindex="-1"><i class="md-icon md-icon-delete"></i></md-button>');
 		remove.on('click', function(event){
 			event.preventDefault();
 			$element.remove();
@@ -529,7 +529,7 @@ angular.module('textAngularSetup', [])
 	};
 	
 	taRegisterTool('insertImage', {
-		iconclass: 'fa fa-picture-o',
+		iconclass: 'md-icon md-icon-video-cam',
 		tooltiptext: taTranslations.insertImage.tooltip,
 		action: function(){
 			var imageLink;
@@ -544,7 +544,7 @@ angular.module('textAngularSetup', [])
 		}
 	});
 	taRegisterTool('insertVideo', {
-		iconclass: 'fa fa-youtube-play',
+		iconclass: 'md-icon md-icon-youtube-play',
 		tooltiptext: taTranslations.insertVideo.tooltip,
 		action: function(){
 			var urlPrompt;
@@ -573,7 +573,7 @@ angular.module('textAngularSetup', [])
 	});	
 	taRegisterTool('insertLink', {
 		tooltiptext: taTranslations.insertLink.tooltip,
-		iconclass: 'fa fa-link',
+		iconclass: 'md-icon md-icon-link',
 		action: function(){
 			var urlLink;
 			urlLink = $window.prompt(taTranslations.insertLink.dialogPrompt, 'http://');
@@ -605,8 +605,8 @@ angular.module('textAngularSetup', [])
 					'vertical-align': 'middle'
 				});
 				container.append(link);
-				var buttonGroup = angular.element('<div class="btn-group pull-right">');
-				var reLinkButton = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" tabindex="-1" unselectable="on"><i class="fa fa-edit icon-edit"></i></button>');
+				var buttonGroup = angular.element('<section layout="column" class="pull-right">');
+				var reLinkButton = angular.element('<md-button unselectable="on" tabindex="-1"><i class="md-icon md-icon-edit icon-edit"></i></md-button>');
 				reLinkButton.on('click', function(event){
 					event.preventDefault();
 					var urlLink = $window.prompt(taTranslations.insertLink.dialogPrompt, $element.attr('href'));
@@ -617,7 +617,7 @@ angular.module('textAngularSetup', [])
 					editorScope.hidePopover();
 				});
 				buttonGroup.append(reLinkButton);
-				var unLinkButton = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" tabindex="-1" unselectable="on"><i class="fa fa-unlink icon-unlink"></i></button>');
+				var unLinkButton = angular.element('<md-button unselectable="on" tabindex="-1"><i class="md-icon md-icon-link icon-unlink"></i></md-button>');
 				// directly before this click event is fired a digest is fired off whereby the reference to $element is orphaned off
 				unLinkButton.on('click', function(event){
 					event.preventDefault();
@@ -626,7 +626,7 @@ angular.module('textAngularSetup', [])
 					editorScope.hidePopover();
 				});
 				buttonGroup.append(unLinkButton);
-				var targetToggle = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" tabindex="-1" unselectable="on">Open in New Window</button>');
+				var targetToggle = angular.element('<md-button unselectable="on" tabindex="-1">Open in New Window</md-button>');
 				if($element.attr('target') === '_blank'){
 					targetToggle.addClass('active');
 				}
