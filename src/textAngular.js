@@ -2,7 +2,7 @@
 @license textAngular
 Author : Austin Anderson
 License : 2013 MIT
-Version 1.3.1
+Version 1.3.2
 
 See README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.
 */
@@ -2449,7 +2449,7 @@ textAngular.directive('textAngularToolbar', [
 					if(toolDefinition && toolDefinition.display){
 						toolElement = angular.element(toolDefinition.display);
 					}
-					else toolElement = angular.element("<md-button type='button'>");
+					else toolElement = angular.element("<button type='button'>");
 					
 					if(toolDefinition && toolDefinition["class"]) toolElement.addClass(toolDefinition["class"]);
 					else toolElement.addClass(scope.classes.toolbarButton);
